@@ -1,0 +1,55 @@
+/* common */
+$font-size-base: 14px;
+$font-size-big: 16px;
+
+$font-size-h6: 12px;
+$font-size-h5: $font-size-base;
+$font-size-h4: 18px; 
+$font-size-h3: 24px; 
+$font-size-h2: 30px; 
+$font-size-h1: 36px; 
+/* $font-size-h4: ceil($font-size-base * 1.25);    //~18px
+$font-size-h3: ceil($font-size-base * 1.7);    //~24px
+$font-size-h2: floor($font-size-base * 2.15);    //~30px
+$font-size-h1: floor($font-size-base * 2.6);    //~36px */
+
+
+
+$color-primary: #337ab7;
+$color-success: #5cb85c;
+$color-info: #5bc0de;
+$color-warning: #f0ad4e;
+$color-danger: #d9534f;
+
+$color-black: #000;
+
+
+$color-gray-lightest: #e6e6e6;
+$color-gray-lighter: #ccc;
+$color-gray-light: #999;
+$color-gray-base: #777;
+$color-gray-dark: #4A4A4A;
+$color-gray-darker: #333;
+$color-gray-darkest: #1A1A1A;
+
+$sep-line-color-base: $color-gray-lightest;
+
+$text-color-base: $color-gray-dark;
+
+$content-bg-color-base: #F8F8F8;
+
+$nav-item-hover-color-default: $color-gray-lightest;
+
+$border-color-grey-lightest: $color-gray-lightest;
+
+$label-color: #fff;
+
+$border-radius-base: 5px;
+$border-radius-small: 3px;
+
+/* nav */
+$nav-height: 50px;
+$nav-bg-color: $content-bg-color-base;
+
+/* footer */
+$footer-height: 60px;
