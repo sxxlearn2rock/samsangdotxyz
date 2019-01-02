@@ -3,9 +3,9 @@ module.exports = {
     'postcss-import': {},
     // 'precss': {},
     'postcss-preset-env': {},
-    // mixins 要在simple-vars和nested之前引入
+    // mixins 要在advanced-variables和nested之前引入
     'postcss-mixins': {},
-    'postcss-simple-vars': {},
+    'postcss-advanced-variables': {},
     'postcss-nested': {},
     // 'cssnano': {}
   }

@@ -82,8 +82,8 @@ div(:class='$style["list-wrapper"]')
           div(:class='$style["tag-group"]')
             span(:class='$style["tag-icon"]')
               i.fa.fa-tags
-            span.tag.tag-primary vue
-            span.tag.tag-primary webpack
+            span.tag.tag-info vue
+            span.tag.tag-info webpack
         div(:class='$style["item-body"]')
           span(:class='$style["article-title"]') vue2+webpack4从零开始开发指南
         div(:class='$style["item-foot"]')

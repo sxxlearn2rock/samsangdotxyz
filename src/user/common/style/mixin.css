@@ -1,3 +1,10 @@
-@define-mixin tag-variant $bg-color {
-  background: $bg-color;
+@import './variable.css';
+
+@define-mixin tag-variant $type {
+  .tag.tag-$(type) {
+    background: $color-$(type);
+    &:hover {
+      background: #ddd;
+    }
+  }
 }

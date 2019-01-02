@@ -1,16 +1,7 @@
 /* user端全局公用的样式 */
 @import './normalize.css';
-@import './variable.css';
+/* @import './variable.css'; */
 @import './mixin.css';
-
-/* @define-mixin tag-variant $type {
-  .$(type) {
-    background: $eee;
-  }
-} */
-
-
-@mixin icon twitter, blue;
 
 :global {
   html, body {
@@ -47,5 +38,10 @@
     border-radius: $border-radius-small;
     cursor: pointer;
   }
+  @mixin tag-variant primary;
+  @mixin tag-variant success;
+  @mixin tag-variant info;
+  @mixin tag-variant warning;
+  @mixin tag-variant error;
 }
 
