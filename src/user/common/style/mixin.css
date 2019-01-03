@@ -2,9 +2,12 @@
 
 @define-mixin tag-variant $type {
   .tag.tag-$(type) {
-    background: $color-$(type);
+    bg: $color-$(type);
     &:hover {
-      background: #ddd;
+      background: color($color-$(type) tint(15%));
+    }
+    &:active {
+      background: color($color-$(type) shade(5%));
     }
   }
 }

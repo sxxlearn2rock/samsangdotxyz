@@ -1,0 +1,8 @@
+/* 为css属性设置别名 */
+@alias {
+  bg: background;
+  c: color;
+  d: display;
+  fs: font-size;
+  fw: font-weight;
+}
