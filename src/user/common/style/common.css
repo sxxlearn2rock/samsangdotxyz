@@ -1,37 +1,38 @@
 /* user端全局公用的样式 */
 @import './normalize.css';
 /* @import './variable.css'; */
+@import './rucksack.css';
 @import './mixin.css';
 
 :global {
   html, body {
     width: 100%;
     height: 100%;
-    font-size: $font-size-base;
-    color: $color-gray-base;
+    fs: $font-size-base;
+    c: $color-gray-base;
   }
   a {
     text-decoration: none;
-    color: $color-gray-base;
+    c: $color-gray-base;
   }
 
   span.menu-item{
-    font-size: $font-size-h5;
+    fs: $font-size-h5;
     cursor: pointer;
     padding: 0 20px;
     &:hover>a{
-      color: $color-gray-light;
+      c: $color-gray-light;
     }
     &.active>a{
       font-size: $font-size-big;
-      color: $color-primary;
+      c: $color-primary;
     } 
   }
 
   span.tag {
-    display: inline-block;
+    d: inline-block;
     padding: 0 6px;
-    color: $label-color;
+    c: $label-color;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
