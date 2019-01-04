@@ -3,6 +3,8 @@
   bg: background;
   c: color;
   d: display;
+  w: width;
+  h: height;
   fs: font-size;
   fw: font-weight;
 }

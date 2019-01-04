@@ -1,7 +1,6 @@
 /* user端全局公用的样式 */
 @import './normalize.css';
 /* @import './variable.css'; */
-@import './rucksack.css';
 @import './mixin.css';
 
 :global {
@@ -10,13 +9,35 @@
     height: 100%;
     fs: $font-size-base;
     c: $color-gray-base;
+    font-family: 'Helvetica', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', 'Arial', 'sans-serif';
   }
+
+  .ellipsis {
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+  }
+
+  .box-border {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
+  }
+
+
   a {
     text-decoration: none;
     c: $color-gray-base;
   }
 
-  span.menu-item{
+  /* menu-item */
+  .menu-item{
     fs: $font-size-h5;
     cursor: pointer;
     padding: 0 20px;
@@ -29,7 +50,8 @@
     } 
   }
 
-  span.tag {
+  /* tag */
+  .tag {
     d: inline-block;
     padding: 0 6px;
     c: $label-color;
@@ -44,5 +66,23 @@
   @mixin tag-variant info;
   @mixin tag-variant warning;
   @mixin tag-variant error;
+
+  /* btn-group */
+  .btn-group {
+    @mixin box-border;
+    d: flex;
+    align-items: center;
+    border: 1px solid $color-gray-light;
+    border-radius: $border-radius-base;
+    &>.btn-item {
+      cursor: pointer;
+      padding: 3px 8px;
+      border-left: 1px solid $color-gray-light;
+      c: $color-gray-light;
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
 }
 
