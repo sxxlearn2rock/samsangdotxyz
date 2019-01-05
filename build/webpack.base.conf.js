@@ -1,13 +1,13 @@
-'use strict'
-// µ¼ÈënodeµÄpathÄ£¿é
+ï»¿'use strict'
+// å¯¼å…¥nodeçš„pathæ¨¡å—
 const path = require('path')
 const config = require('../config/index.js')
 const vueLoaderConfig = require('./vue-loader.conf.js')
 const { VueLoaderPlugin } = require('vue-loader')
-// ÓÃÓÚ¸´ÖÆindex.html²¢²åÈë´ò°üºóµÄÎÄ¼ş
+// ç”¨äºå¤åˆ¶index.htmlå¹¶æ’å…¥æ‰“åŒ…åçš„æ–‡ä»¶
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-// ÉèÖÃÒ»¸ö±ã½İº¯Êı
+// è®¾ç½®ä¸€ä¸ªä¾¿æ·å‡½æ•°
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -19,7 +19,7 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name]_budle_[hash:10].js',
-    // ×ÊÔ´Â·¾¶Ç°×º
+    // èµ„æºè·¯å¾„å‰ç¼€
     // publicPath: devMode ? 
     //             config.dev.assetsPublicPath :
     //             config.build.assetsPublicPath
@@ -27,7 +27,7 @@ module.exports = {
   },
   resolve: {
     // extensions: ['.js', '.vue', '.json'],
-    // ÉèÖÃÂ·¾¶µÄ±ğÃû
+    // è®¾ç½®è·¯å¾„çš„åˆ«å
     alias: {
       // 'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -58,9 +58,9 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          // 30kÒÔÏÂµÄÍ¼Æ¬ÓÃurl-loader¼ÓÔØ
+          // 30kä»¥ä¸‹çš„å›¾ç‰‡ç”¨url-loaderåŠ è½½
           limit: 1024*30,
-          // ·ñÔò²ÉÓÃfile-loader£¬Ëü²ÉÓÃÓëurl-loaderµÄoptions
+          // å¦åˆ™é‡‡ç”¨file-loaderï¼Œå®ƒé‡‡ç”¨ä¸url-loaderçš„options
           fallback: 'file-loader',
           // name: utils.assetsPath('img/[name].[hash:7].[ext]')
           name: 'asset/image/[name]_[hash:7].[ext]'
@@ -93,14 +93,14 @@ module.exports = {
     }),
   ],
   optimization: {
-    // ´úÂë·Ö¸î
+    // ä»£ç åˆ†å‰²
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
         vendors: {
           test: /node_modules/,
           minChunks: 1,
-          // ¸ÃchunkµÄÃû×Ö£¬ÓÃÓÚHtmlWebpackPluginÒıÈëchunk
+          // è¯¥chunkçš„åå­—ï¼Œç”¨äºHtmlWebpackPluginå¼•å…¥chunk
           name: 'vendors'
         }
       }
