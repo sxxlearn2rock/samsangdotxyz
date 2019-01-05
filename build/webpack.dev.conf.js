@@ -1,4 +1,4 @@
-const path = require('path')
+ï»¿const path = require('path')
 const webpack = require('webpack')
 const config = require('../config/index.js')
 const merge = require('webpack-merge')
@@ -7,7 +7,7 @@ const baseWebpackConfig = require('./webpack.base.conf.js')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
-// ÉèÖÃÒ»¸ö±ã½İº¯Êı
+// è®¾ç½®ä¸€ä¸ªä¾¿æ·å‡½æ•°
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -27,7 +27,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       // {
       //   test: /\.(sc|c)ss$/,
       //   use: [
-      //     // ½«cssÑùÊ½Éú³ÉÎªÒ»¸östyle±êÇ©£¬²åÈëµ½head±êÇ©ÖĞ
+      //     // å°†cssæ ·å¼ç”Ÿæˆä¸ºä¸€ä¸ªstyleæ ‡ç­¾ï¼Œæ’å…¥åˆ°headæ ‡ç­¾ä¸­
       //     'vue-style-loader',
       //     'css-loader',
       //     'sass-loader'
@@ -40,11 +40,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           {
             loader: 'css-loader',
             options: { 
-              // Ö¸Ã÷ÔÚcss-loaderÖ®Ç°Ê¹ÓÃµÄloaderÊıÁ¿
+              // æŒ‡æ˜åœ¨css-loaderä¹‹å‰ä½¿ç”¨çš„loaderæ•°é‡
               importLoaders: 1,
-              // ¿ªÆô CSS Modules
+              // å¼€å¯ CSS Modules
               modules: true,
-              // ×Ô¶¨ÒåÉú³ÉµÄÀàÃû
+              // è‡ªå®šä¹‰ç”Ÿæˆçš„ç±»å
               localIdentName: '[local]_[hash:base64:8]'
             }
           },
@@ -64,9 +64,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     // ])
   ],
   optimization: {
-    // ÓëHMRÅäºÏÊ¹ÓÃ£¬ÔÚÈÈ¼ÓÔØÊ±Ö±½Ó·µ»Ø¸üĞÂÎÄ¼şÃû£¬¶ø²»ÊÇÎÄ¼şµÄid
+    // ä¸HMRé…åˆä½¿ç”¨ï¼Œåœ¨çƒ­åŠ è½½æ—¶ç›´æ¥è¿”å›æ›´æ–°æ–‡ä»¶åï¼Œè€Œä¸æ˜¯æ–‡ä»¶çš„id
     namedModules: true,
-    // Èç¹û±àÒë³ö´í£¬ÄÇÃ´Ìø¹ıÊä³ö£¬Ê¹ÓÃ¸Ã²å¼ş¿ÉÒÔ±£Ö¤Êä³ö×ÊÔ´²»°üº¬´íÎó
+    // å¦‚æœç¼–è¯‘å‡ºé”™ï¼Œé‚£ä¹ˆè·³è¿‡è¾“å‡ºï¼Œä½¿ç”¨è¯¥æ’ä»¶å¯ä»¥ä¿è¯è¾“å‡ºèµ„æºä¸åŒ…å«é”™è¯¯
     noEmitOnErrors: true
   }
 })
