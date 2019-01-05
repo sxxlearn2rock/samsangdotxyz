@@ -9,7 +9,7 @@ module.exports = {
     assetsPublicPath: '/',
     // proxyTable: {},
     devtool: 'cheap-module-eval-source-map',
-    host: 'dev.learn.oa.com',
+    host: 'localhost',
     port: '8998',
     autoOpenBrowser: false,
   },
