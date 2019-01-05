@@ -178,7 +178,6 @@ export default {
     },
     getArticles(nav) {
       this.setActiveNav(nav)
-      this.articleList = 
     }
   },
   mounted() {
