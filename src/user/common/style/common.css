@@ -40,7 +40,7 @@
   .menu-item{
     fs: $font-size-h5;
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 15px;
     &:hover>a{
       c: $color-gray-light;
     }
@@ -84,5 +84,8 @@
       }
     }
   }
+
+  /* vue */
+  @mixin vue-transition-fade;
 }
 

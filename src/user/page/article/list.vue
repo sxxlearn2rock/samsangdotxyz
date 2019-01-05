@@ -26,7 +26,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 30px auto 36px;
-  padding: 0 20px;
+  padding: 0 15px;
   border-bottom: 1px solid $sep-line-color-base;
   .item-head {
     display: flex;
@@ -61,6 +61,7 @@
   .item-body {
     padding: 5px 0;
     &>.article-title {
+      cursor: pointer;
       w: 100%;
       fs: $font-size-h4;
       c: $color-gray-darker;
@@ -106,7 +107,9 @@ div(:class='$style["list-wrapper"]')
       @click='getArticles(item.nav)')
         a {{ item.name }}
     div(:class='$style["list-body"]')
-      div(:class='$style["list-item"]')
+      div(:class='$style["list-item"]'
+      @mouseover='showOperBtns(true)'
+      @mouseout='showOperBtns(false)')
         div(:class='$style["item-head"]')
           div(:class='$style["left-part"]')
             span(:class='$style["special-column"]') 专栏
@@ -122,17 +125,19 @@ div(:class='$style["list-wrapper"]')
           span(:class='$style["article-title"]') vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南
         div(:class='$style["item-foot"]')
           div(:class='$style["left-part"]')
-            div.btn-group(:class='$style["btn-group"]')
+            div.btn-group
               span.btn-item(:class='$style["thumbs-up"]')
                 i.fa.fa-thumbs-up  255
               span.btn-item(:class='$style["comment"]')
                 i.fa.fa-commenting  366
           div(:class='$style["right-part"]')
-            div.btn-group(:class='$style["btn-group"]')
-              span.btn-item(:class='$style["collect"]')
-                i.fa.fa-star
-              span.btn-item(:class='$style["share"]')
-                i.fa.fa-share-alt
+            transition(name='fade')
+              div.btn-group(:class='$style["btn-group"]'
+              v-show="isShowOperBtn")
+                span.btn-item(:class='$style["collect"]')
+                  i.fa.fa-star
+                span.btn-item(:class='$style["share"]')
+                  i.fa.fa-share-alt
   div(:class='$style["right-sidebar"]')
 </template>
 
@@ -154,7 +159,9 @@ export default {
         {
           name: '后端',
           nav: 'backend'
-        }]
+        }],
+        isShowOperBtn: false,
+        articleList: []
     }
   },
   computed: {
@@ -166,8 +173,12 @@ export default {
     ...mapActions('article', [
         'setActiveNav',
     ]),
+    showOperBtns(flag) {
+      this.isShowOperBtn = flag
+    },
     getArticles(nav) {
       this.setActiveNav(nav)
+      this.articleList = 
     }
   },
   mounted() {
