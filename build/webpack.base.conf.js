@@ -19,10 +19,6 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name]_budle_[hash:10].js',
-    // 资源路径前缀
-    // publicPath: devMode ? 
-    //             config.dev.assetsPublicPath :
-    //             config.build.assetsPublicPath
     publicPath: '/'
   },
   resolve: {

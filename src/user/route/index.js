@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import home from '../page/home/index.vue'
 import article from '../page/article/index.vue'
 import testPage from '../page/testPage/index.vue'
+import lab from '../page/lab/index.vue'
 
 import store from '../vuex/store.js'
 
@@ -24,6 +25,11 @@ const routes = [
     path: '/testPage',
     name: 'testPage',
     component: testPage
+  },
+  {
+    path: '/lab',
+    name: 'lab',
+    component: lab
   },
 ]
 

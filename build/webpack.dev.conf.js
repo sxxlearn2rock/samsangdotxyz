@@ -24,15 +24,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(sc|c)ss$/,
-      //   use: [
-      //     // 将css样式生成为一个style标签，插入到head标签中
-      //     'vue-style-loader',
-      //     'css-loader',
-      //     'sass-loader'
-      //   ]
-      // },
       {
         test: /\.(c|s)ss$/,
         use: [
