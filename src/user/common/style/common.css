@@ -60,6 +60,8 @@
     vertical-align: baseline;
     border-radius: $border-radius-small;
     cursor: pointer;
+    max-width: 150px;
+    @mixin ellipsis;
   }
   @mixin tag-variant primary;
   @mixin tag-variant success;
@@ -72,15 +74,16 @@
     @mixin box-border;
     d: flex;
     align-items: center;
-    border: 1px solid $color-gray-light;
-    border-radius: $border-radius-base;
+    /* border-radius: $border-radius-base; */
     &>.btn-item {
       cursor: pointer;
       padding: 3px 8px;
-      border-left: 1px solid $color-gray-light;
+      border: 1px solid $color-gray-light;
+      border-left: none;
+      /* border-radius-left-top: $border-radius-base; */
       c: $color-gray-light;
       &:first-child {
-        border-left: none;
+        /* border-left: 1px solid $color-gray-light; */
       }
     }
   }

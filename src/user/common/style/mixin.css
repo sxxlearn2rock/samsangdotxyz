@@ -20,6 +20,12 @@
   }
 }
 
+@define-mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
 @define-mixin box-border {
   box-sizing:border-box;
   -moz-box-sizing:border-box; 

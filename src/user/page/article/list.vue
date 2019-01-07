@@ -26,7 +26,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 30px auto 36px;
-  padding: 0 15px;
+  padding: 8px 15px;
   border-bottom: 1px solid $sep-line-color-base;
   .item-head {
     display: flex;
@@ -44,6 +44,7 @@
       }
       .special-column {
         color: $color-primary;
+        cursor: pointer;
       }
     }
     &>.tag-group {
@@ -59,7 +60,6 @@
 
   }
   .item-body {
-    padding: 5px 0;
     &>.article-title {
       cursor: pointer;
       w: 100%;
@@ -115,17 +115,17 @@ div(:class='$style["list-wrapper"]')
           div(:class='$style["left-part"]')
             div.btn-group
               span.btn-item(title='点赞')
-                i.fa.fa-thumbs-up.icon-primary  {{ item.thumbs_up_count }}
+                i.fa.fa-thumbs-up  {{ item.thumbs_up_count }}
               span.btn-item(title='评论')
-                i.fa.fa-commenting.icon-info  {{ item.comment_count }}
+                i.fa.fa-commenting  {{ item.comment_count }}
           div(:class='$style["right-part"]')
             transition(name='fade')
               div.btn-group(:class='$style["btn-group"]'
               v-show="isShowOperBtn")
                 span.btn-item(:title='item.is_collected ? "已收藏" : "收藏"')
-                  i.fa.fa-star.icon-warning(:class='{active: item.is_collected}')
+                  i.fa.fa-star(:class='{active: item.is_collected}')
                 span.btn-item(title='分享')
-                  i.fa.fa-share-alt.icon-success
+                  i.fa.fa-share-alt
   div(:class='$style["right-sidebar"]')
 </template>
 
@@ -174,6 +174,33 @@ export default {
         thumbs_up_count: 123,
         comment_count: 999,
         is_collected: true
+      })
+      this.articleList.push({
+        title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
+        belong_special_column_id: 1,
+        publish_date: '2019-01-01 15:02:21',
+        tags: ['vue', 'webpack'],
+        thumbs_up_count: 123,
+        comment_count: 999999999,
+        is_collected: false
+      })
+      this.articleList.push({
+        title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
+        belong_special_column_id: null,
+        publish_date: '2019-01-01 15:02:21',
+        tags: ['vue', 'webpack', 'vue2', 'webpack4'],
+        thumbs_up_count: 123,
+        comment_count: 999,
+        is_collected: true
+      })
+      this.articleList.push({
+        title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
+        belong_special_column_id: 1,
+        publish_date: '2019-01-01 15:02:21',
+        tags: ['vue', 'webpack','vue2', 'webpack4webpack4webpack4webpack4webpack4'],
+        thumbs_up_count: 123,
+        comment_count: 999,
+        is_collected: false
       })
     }
   },
