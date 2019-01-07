@@ -97,8 +97,8 @@ div(:class='$style["list-wrapper"]')
     div(:class='$style["list-body"]')
       div(v-for='item of articleList'
       :class='$style["list-item"]'
-      @mouseover='showOperBtns(true)'
-      @mouseout='showOperBtns(false)')
+      @mouseover='setCurHoverArticleId(item.id)'
+      @mouseout='setCurHoverArticleId(null)')
         div(:class='$style["item-head"]')
           div(:class='$style["left-part"]')
             span(v-if='item.belong_special_column_id > 0'
@@ -121,7 +121,7 @@ div(:class='$style["list-wrapper"]')
           div(:class='$style["right-part"]')
             transition(name='fade')
               div.btn-group(:class='$style["btn-group"]'
-              v-show="isShowOperBtn")
+              v-show="curHoverArticleId === item.id")
                 span.btn-item.warning(:title='item.is_collected ? "已收藏" : "收藏"'
                 :class='{active: item.is_collected}')
                   i.fa.fa-star
@@ -150,7 +150,9 @@ export default {
           nav: 'backend'
         }],
         isShowOperBtn: false,
-        articleList: []
+        articleList: [],
+        // 指示现在鼠标hover的文章
+        curHoverArticleId: null
     }
   },
   computed: {
@@ -162,12 +164,13 @@ export default {
     ...mapActions('article', [
         'setActiveNav',
     ]),
-    showOperBtns(flag) {
-      this.isShowOperBtn = flag
+    setCurHoverArticleId(id) {
+      this.curHoverArticleId = id;
     },
     getArticles(nav) {
       this.setActiveNav(nav)
       this.articleList.push({
+        id: 1,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
         publish_date: '2019-01-01 15:02:21',
@@ -177,6 +180,7 @@ export default {
         is_collected: true
       })
       this.articleList.push({
+        id: 2,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
         publish_date: '2019-01-01 15:02:21',
@@ -186,6 +190,7 @@ export default {
         is_collected: false
       })
       this.articleList.push({
+        id: 3,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: null,
         publish_date: '2019-01-01 15:02:21',
@@ -195,6 +200,7 @@ export default {
         is_collected: true
       })
       this.articleList.push({
+        id: 4,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
         publish_date: '2019-01-01 15:02:21',
