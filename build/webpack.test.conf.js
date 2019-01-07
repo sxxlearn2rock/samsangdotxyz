@@ -33,7 +33,7 @@ const testWebpackConfig = merge(baseWebpackConfig, {
 
 // 测试不需要app入口
 delete testWebpackConfig.entry
-// test时不需要优化
+// test时不需要splite代码
 delete testWebpackConfig.optimization
 
 module.exports = testWebpackConfig
