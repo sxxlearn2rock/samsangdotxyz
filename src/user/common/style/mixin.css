@@ -20,6 +20,19 @@
   }
 }
 
+@define-mixin btn-item-variant $type{
+  &.$(type):hover {
+    c: $color-$(type);
+    border-color: $color-$(type);
+    &+.btn-item {
+      border-left: 1px solid $color-$(type);
+    }
+  }
+  &.$(type).active i{
+    c: $color-$(type);
+  }
+}
+
 @define-mixin ellipsis {
   white-space: nowrap;
   overflow: hidden;

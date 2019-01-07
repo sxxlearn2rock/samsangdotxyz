@@ -114,17 +114,18 @@ div(:class='$style["list-wrapper"]')
         div(:class='$style["item-foot"]')
           div(:class='$style["left-part"]')
             div.btn-group
-              span.btn-item(title='点赞')
+              span.btn-item.primary(title='点赞')
                 i.fa.fa-thumbs-up  {{ item.thumbs_up_count }}
-              span.btn-item(title='评论')
+              span.btn-item.info(title='评论')
                 i.fa.fa-commenting  {{ item.comment_count }}
           div(:class='$style["right-part"]')
             transition(name='fade')
               div.btn-group(:class='$style["btn-group"]'
               v-show="isShowOperBtn")
-                span.btn-item(:title='item.is_collected ? "已收藏" : "收藏"')
-                  i.fa.fa-star(:class='{active: item.is_collected}')
-                span.btn-item(title='分享')
+                span.btn-item.warning(:title='item.is_collected ? "已收藏" : "收藏"'
+                :class='{active: item.is_collected}')
+                  i.fa.fa-star
+                span.btn-item.success(title='分享')
                   i.fa.fa-share-alt
   div(:class='$style["right-sidebar"]')
 </template>

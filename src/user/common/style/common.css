@@ -79,12 +79,23 @@
       cursor: pointer;
       padding: 3px 8px;
       border: 1px solid $color-gray-light;
-      border-left: none;
+      border-right: none;
       /* border-radius-left-top: $border-radius-base; */
       c: $color-gray-light;
       &:first-child {
-        /* border-left: 1px solid $color-gray-light; */
+        border-top-left-radius: $border-radius-base;
+        border-bottom-left-radius: $border-radius-base;
       }
+      &:last-child {
+        border-right: 1px solid $color-gray-light;
+        border-top-right-radius: $border-radius-base;
+        border-bottom-right-radius: $border-radius-base;
+      }
+      @mixin btn-item-variant primary;
+      @mixin btn-item-variant success;
+      @mixin btn-item-variant info;
+      @mixin btn-item-variant warning;
+      @mixin btn-item-variant error;
     }
   }
 
