@@ -81,18 +81,6 @@
       @mixin fja center, flex-end;
       w: 50%;
     }
-    .thumbs-up:hover {
-      color: $color-primary;
-    }
-    .comment:hover {
-      color: $color-info;
-    }
-    .collect:hover {
-      color: $color-warning;
-    }
-    .share:hover {
-      color: $color-success;
-    }
   }
 }
 
@@ -107,37 +95,37 @@ div(:class='$style["list-wrapper"]')
       @click='getArticles(item.nav)')
         a {{ item.name }}
     div(:class='$style["list-body"]')
-      div(:class='$style["list-item"]'
+      div(v-for='item of articleList'
+      :class='$style["list-item"]'
       @mouseover='showOperBtns(true)'
       @mouseout='showOperBtns(false)')
         div(:class='$style["item-head"]')
           div(:class='$style["left-part"]')
-            span(:class='$style["special-column"]') 专栏
-            span 2019-01-01
+            span(v-if='item.belong_special_column_id > 0'
+            :class='$style["special-column"]') 专栏
+            span {{ item.publish_date }}
           div(:class='$style["tag-group"]')
             span(:class='$style["tag-icon"]')
               i.fa.fa-tags
-            span.tag.tag-info(:class='$style["tag"]') vue
-            span.tag.tag-info(:class='$style["tag"]') webpack
-            span.tag.tag-info(:class='$style["tag"]') vue2
-            span.tag.tag-info(:class='$style["tag"]') webpack4
+            span.tag.tag-info(v-for='tagItem of item.tags'
+            :class='$style["tag"]') {{ tagItem }}
         div(:class='$style["item-body"]')
-          span(:class='$style["article-title"]') vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南
+          span(:class='$style["article-title"]') {{ item.title }}
         div(:class='$style["item-foot"]')
           div(:class='$style["left-part"]')
             div.btn-group
-              span.btn-item(:class='$style["thumbs-up"]')
-                i.fa.fa-thumbs-up  255
-              span.btn-item(:class='$style["comment"]')
-                i.fa.fa-commenting  366
+              span.btn-item(title='点赞')
+                i.fa.fa-thumbs-up.icon-primary  {{ item.thumbs_up_count }}
+              span.btn-item(title='评论')
+                i.fa.fa-commenting.icon-info  {{ item.comment_count }}
           div(:class='$style["right-part"]')
             transition(name='fade')
               div.btn-group(:class='$style["btn-group"]'
               v-show="isShowOperBtn")
-                span.btn-item(:class='$style["collect"]')
-                  i.fa.fa-star
-                span.btn-item(:class='$style["share"]')
-                  i.fa.fa-share-alt
+                span.btn-item(:title='item.is_collected ? "已收藏" : "收藏"')
+                  i.fa.fa-star.icon-warning(:class='{active: item.is_collected}')
+                span.btn-item(title='分享')
+                  i.fa.fa-share-alt.icon-success
   div(:class='$style["right-sidebar"]')
 </template>
 
@@ -178,10 +166,20 @@ export default {
     },
     getArticles(nav) {
       this.setActiveNav(nav)
+      this.articleList.push({
+        title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
+        belong_special_column_id: 1,
+        publish_date: '2019-01-01 15:02:21',
+        tags: ['vue', 'webpack', 'vue2', 'webpack4'],
+        thumbs_up_count: 123,
+        comment_count: 999,
+        is_collected: true
+      })
     }
   },
   mounted() {
-    this.setActiveNav('recommend')
+    // this.setActiveNav('recommend')
+    this.getArticles('recommend')
   }
 }
 </script>

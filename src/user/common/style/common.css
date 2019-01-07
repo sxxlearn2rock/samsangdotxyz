@@ -85,6 +85,13 @@
     }
   }
 
+  /* icons */
+  @mixin icon-variant primary;
+  @mixin icon-variant success;
+  @mixin icon-variant info;
+  @mixin icon-variant warning;
+  @mixin icon-variant error;
+
   /* vue */
   @mixin vue-transition-fade;
 }

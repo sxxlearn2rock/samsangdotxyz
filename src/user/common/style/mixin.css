@@ -12,6 +12,14 @@
   }
 }
 
+@define-mixin icon-variant $type {
+  .icon-$(type) {
+    &:hover,&.active {
+      c: $color-$(type);
+    }
+  }
+}
+
 @define-mixin box-border {
   box-sizing:border-box;
   -moz-box-sizing:border-box; 
