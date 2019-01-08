@@ -209,6 +209,9 @@ export default {
         comment_count: 999,
         is_collected: false
       })
+    },
+    publishDateFilter(val) {
+      return val
     }
   },
   mounted() {
