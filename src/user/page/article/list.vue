@@ -184,7 +184,7 @@ export default {
         id: 2,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
-        publish_date: '2019-01-01 15:02:21',
+        publish_date: '2019-01-16 18:02:21',
         tags: ['vue', 'webpack'],
         thumbs_up_count: 123,
         comment_count: 999999999,
@@ -204,7 +204,7 @@ export default {
         id: 4,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
-        publish_date: '2019-01-01 15:02:21',
+        publish_date: '2019-01-15 15:02:21',
         tags: ['vue', 'webpack','vue2', 'webpack4webpack4webpack4webpack4webpack4'],
         thumbs_up_count: 123,
         comment_count: 999,
@@ -218,7 +218,10 @@ export default {
       const dateTime = util.stringToDate(val).getTime()
       const diff = nowTime - dateTime
       if (diff / window.$CONST.HOUR < 3) {
-        return '刚刚'
+        return '3小时内'
+      }
+      if (diff / window.$CONST.DAY <= 1) {
+        return '昨天'
       }
       return val
     }
