@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { shallowMount } from '@vue/test-utils'
 import Counter from '../../../../src/user/page/lab/counter.vue'
 
-describe('Counter.vue', () => {
+describe('counter.vue', () => {
   it('increments count when button is clicked', () => {
     const wrapper = shallowMount(Counter)
     wrapper.find('button').trigger('click')

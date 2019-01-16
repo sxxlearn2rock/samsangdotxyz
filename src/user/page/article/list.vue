@@ -103,7 +103,7 @@ div(:class='$style["list-wrapper"]')
           div(:class='$style["left-part"]')
             span(v-if='item.belong_special_column_id > 0'
             :class='$style["special-column"]') 专栏
-            span {{ item.publish_date }}
+            span {{ item.publish_date | publishDateFilter }}
           div(:class='$style["tag-group"]')
             span(:class='$style["tag-icon"]')
               i.fa.fa-tags
@@ -132,6 +132,7 @@ div(:class='$style["list-wrapper"]')
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import util from '../../../common/js/util.js'
 
 export default {
   data() {
@@ -183,7 +184,7 @@ export default {
         id: 2,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
-        publish_date: '2019-01-01 15:02:21',
+        publish_date: '2019-01-16 18:02:21',
         tags: ['vue', 'webpack'],
         thumbs_up_count: 123,
         comment_count: 999999999,
@@ -203,16 +204,29 @@ export default {
         id: 4,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
-        publish_date: '2019-01-01 15:02:21',
+        publish_date: '2019-01-15 23:02:21',
         tags: ['vue', 'webpack','vue2', 'webpack4webpack4webpack4webpack4webpack4'],
         thumbs_up_count: 123,
         comment_count: 999,
         is_collected: false
       })
+    },
+  },
+  filters: {
+    publishDateFilter(val){
+      const nowTime = (new Date()).getTime()
+      const dateTime = util.stringToDate(val).getTime()
+      const diff = nowTime - dateTime
+      if (diff / window.$CONST.HOUR < 3) {
+        return '3小时内'
+      }
+      if (diff / window.$CONST.DAY <= 1) {
+        return '昨天'
+      }
+      return val
     }
   },
   mounted() {
-    // this.setActiveNav('recommend')
     this.getArticles('recommend')
   }
 }

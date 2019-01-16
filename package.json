@@ -1,12 +1,12 @@
 {
-  "name": "study-vue-cli",
+  "name": "samsang-dot-xyz",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "samsang",
   "scripts": {
     "dev": "webpack-dev-server --color --mode=development --config build/webpack.dev.conf.js",
     "build": "webpack --mode=production --config build/webpack.prod.conf.js",
-    "test": "karma start --single-run"
+    "test": "karma start --auto-watch"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
