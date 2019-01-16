@@ -103,7 +103,7 @@ div(:class='$style["list-wrapper"]')
           div(:class='$style["left-part"]')
             span(v-if='item.belong_special_column_id > 0'
             :class='$style["special-column"]') 专栏
-            span {{ item.publish_date }}
+            span {{ item.publish_date | publishDateFilter }}
           div(:class='$style["tag-group"]')
             span(:class='$style["tag-icon"]')
               i.fa.fa-tags
@@ -132,6 +132,7 @@ div(:class='$style["list-wrapper"]')
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import util from '../../../common/js/util.js'
 
 export default {
   data() {
@@ -210,12 +211,19 @@ export default {
         is_collected: false
       })
     },
-    publishDateFilter(val) {
+  },
+  filters: {
+    publishDateFilter(val){
+      const nowTime = (new Date()).getTime()
+      const dateTime = util.stringToDate(val).getTime()
+      const diff = nowTime - dateTime
+      if (diff / window.$CONST.HOUR < 3) {
+        return '刚刚'
+      }
       return val
     }
   },
   mounted() {
-    // this.setActiveNav('recommend')
     this.getArticles('recommend')
   }
 }
