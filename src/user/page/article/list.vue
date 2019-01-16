@@ -204,7 +204,7 @@ export default {
         id: 4,
         title: 'vue2+webpack4从零开始开发指南vue2+webpack4从零开始开发指南',
         belong_special_column_id: 1,
-        publish_date: '2019-01-15 15:02:21',
+        publish_date: '2019-01-15 23:02:21',
         tags: ['vue', 'webpack','vue2', 'webpack4webpack4webpack4webpack4webpack4'],
         thumbs_up_count: 123,
         comment_count: 999,
