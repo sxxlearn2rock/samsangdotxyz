@@ -45,6 +45,11 @@
   -webkit-box-sizing:border-box; 
 }
 
+@define-mixin size $width:100%, $height:100% {
+  w: $width;
+  h: $height;
+}
+
 /* display:flex;align-items: ;justify-content: ;的简写*/
 @define-mixin fja $a:center, $j:flex-start{
   d: flex;
