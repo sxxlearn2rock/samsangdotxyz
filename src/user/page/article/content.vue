@@ -1,5 +1,5 @@
 <style lang="sss" module>
-@import '../../common/style/common.css';
+/*@import '../../common/style/common.css';
 .content-wrapper {
   d: flex;
   @mixin size;
@@ -8,7 +8,7 @@
     h: 100%;
     bg: #aaa;
   }
-}
+}*/
 </style>
 
 <template lang="pug">

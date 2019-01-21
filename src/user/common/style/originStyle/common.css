@@ -1,12 +1,18 @@
+/* originStyle文件夹中的文件都是纯css样式，在组件中的style标签中被@import时，
+会被复制到被@import的地方，所以如果是全局样式，在app.vue中引用一次即可
+而其他如mixin.css并非css样式，而是posscss的增强语法，它们会被postcss的插件处理，
+所以它们在被需要时须用@import引入 */
 /* user端全局公用的样式 */
 @import './normalize.css';
 /* @import './variable.css'; */
-@import './mixin.css';
+@import '../mixin.css';
 
 :global {
   html, body {
     width: 100%;
     height: 100%;
+  }
+  body {
     fs: $font-size-base;
     c: $color-gray-base;
     font-family: 'Helvetica', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', 'Arial', 'sans-serif';

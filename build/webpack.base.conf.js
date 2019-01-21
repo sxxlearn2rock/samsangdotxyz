@@ -6,6 +6,7 @@ const vueLoaderConfig = require('./vue-loader.conf.js')
 const { VueLoaderPlugin } = require('vue-loader')
 // 用于复制index.html并插入打包后的文件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // 设置一个便捷函数
 function resolve (dir) {
@@ -87,6 +88,13 @@ module.exports = {
       inject: true,
       // chunks:['user/app', 'vendors']
     }),
+    new CopyWebpackPlugin([
+      {
+        from: resolve('src/asset'),
+        to: config.build.assetsRoot + '/asset'
+        // ignore: ['.*']
+      }
+    ])
   ],
   optimization: {
     // 代码分割

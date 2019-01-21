@@ -1,13 +1,9 @@
 <style lang="sss">
-@import './common/style/common.css';
+@import './common/style/originStyle/common.css';
 :global {
 
 }
 </style>
-
-<script>
-// import './common/style/variable.css';
-</script>
 
 <style lang="sss" module>
 @import './common/style/variable.css';

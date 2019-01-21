@@ -45,14 +45,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    // new CopyWebpackPlugin([
-    //   {
-    //     from: resolve('static'),
-    //     to: config.dev.assetsSubDirectory,
-    //     ignore: ['.*']
-    //   }
-    // ])
+    new webpack.HotModuleReplacementPlugin()
   ],
   optimization: {
     // 与HMR配合使用，在热加载时直接返回更新文件名，而不是文件的id

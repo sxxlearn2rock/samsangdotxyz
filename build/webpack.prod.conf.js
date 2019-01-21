@@ -32,7 +32,7 @@ const prodWebpackConfig = merge(baseWebpackConfig, {
       {
         test: /\.sss$/,
         use: [
-          'vue-style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             // 指明在css-loader之前使用的loader数量
