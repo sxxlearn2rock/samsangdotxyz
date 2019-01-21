@@ -1,6 +1,5 @@
 <style lang="sss">
 /* lab lab*/
-/*@import '../../common/style/common.css';*/
 </style>
 
 <template lang="pug">

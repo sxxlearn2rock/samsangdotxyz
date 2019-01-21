@@ -1,5 +1,5 @@
 <style lang="sss">
-@import './common/style/originStyle/common.css';
+@import './common/style/originStyle/global.css';
 :global {
 
 }
