@@ -19,7 +19,7 @@
   }
   .body {
     background: $color-gray-lightest;
-    padding-top: 20px;
+    padding: 20px 0;
   }
   .footer {
     background: #ccc;

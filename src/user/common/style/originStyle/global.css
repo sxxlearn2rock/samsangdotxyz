@@ -17,7 +17,13 @@
     c: $color-gray-base;
     font-family: 'Helvetica', 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', 'Arial', 'sans-serif';
   }
-
+  
+  div {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box; 
+  }
+  
   .ellipsis {
     /* white-space: nowrap;
     overflow: hidden;
@@ -40,6 +46,17 @@
   a {
     text-decoration: none;
     c: $color-gray-base;
+    cursor: pointer;
+  }
+
+  a.link {
+    c: $color-primary;
+    &:hover {
+      c: color($color-primary tint(15%));
+    }
+    &:active {
+      c: color($color-primary shade(5%));
+    }
   }
 
   /* menu-item */

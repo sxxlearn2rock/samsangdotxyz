@@ -52,6 +52,11 @@
   h: $height;
 }
 
+@define-mixin full-size {
+  w: 100%;
+  h: 100%;
+}
+
 /* display:flex;align-items: ;justify-content: ;的简写*/
 @define-mixin fja $a:center, $j:flex-start{
   d: flex;
