@@ -74,18 +74,6 @@
 }
 
 /* icons */
-@define-mixin icon-size $size-type, $size{
-  .icon-$(size-type) {
-    w: $size;
-    h: $size;
-    line-height: $size;
-    bg: $content-bg-color-base;
-    text-align: center;
-    border-radius: calc($size / 2);
-    fs: calc($size / 2);
-  }
-}
-
 @define-mixin icon $size-type {
   @if $size-type == xs {
     @mixin icon-size $size-type, 16px;
@@ -104,3 +92,23 @@
   }
 }
 
+@define-mixin icon-size $size-type, $size{
+  .icon-$(size-type) {
+    w: $size;
+    h: $size;
+    line-height: $size;
+    text-align: center;
+    border-radius: calc($size / 2);
+    fs: calc($size / 2);
+  }
+}
+
+/* 灰色的图标 */
+@define-mixin icon-gray $type{
+  .icon.icon-gray-$type {
+    bg: $content-bg-color-base;
+    &:hover {
+      c: $color-$(type);
+    }
+  }
+}

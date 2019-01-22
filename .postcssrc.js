@@ -10,5 +10,6 @@ module.exports = {
     'postcss-nested': {},
     'postcss-color-function': {}
     // 'cssnano': {}
-  }
+  },
+  syntax: 'postcss-scss'
 }

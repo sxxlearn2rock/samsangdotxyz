@@ -3,6 +3,7 @@
 @import './rucksack.css';
 
 /* common */
+$theme-type: primary,info, success, warning, error;
 $size-type: xs, sm, bs, lg, xl;
 
 $font-size-base: 14px;
@@ -16,15 +17,6 @@ $font-size-h3: 24px;
 $font-size-h2: 30px; 
 $font-size-h1: 36px; 
 
-$color-primary: #337ab7;
-$color-success: #5cb85c;
-$color-info: #5bc0de;
-$color-warning: #f0ad4e;
-$color-error: #d9534f;
-
-$color-black: #000;
-
-
 $color-gray-lightest: #e6e6e6;
 $color-gray-lighter: #ccc;
 $color-gray-light: #999;
@@ -32,6 +24,13 @@ $color-gray-base: #777;
 $color-gray-dark: #4A4A4A;
 $color-gray-darker: #333;
 $color-gray-darkest: #1A1A1A;
+
+$color-primary: #337ab7;
+$color-success: #5cb85c;
+$color-info: #5bc0de;
+$color-warning: #f0ad4e;
+$color-error: #d9534f;
+$color-black: #000;
 
 $sep-line-color-base: $color-gray-lightest;
 

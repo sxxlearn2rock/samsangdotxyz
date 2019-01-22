@@ -77,6 +77,11 @@
   @each $st in $size-type {
     @mixin icon $st;
   }
+  @mixin icon-gray primary;
+  @mixin icon-gray success;
+  @mixin icon-gray info;
+  @mixin icon-gray warning;
+  @mixin icon-gray error;
 
   /* tag */
   .tag {

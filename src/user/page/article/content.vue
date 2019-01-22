@@ -35,7 +35,7 @@
   .head {
     w: 100%;
     &>div{
-      padding: 3px 0;
+      padding: 5px 0;
     }
     &>.title {
       font-size: $font-size-h3;
@@ -77,11 +77,11 @@ div(:class='$style["content-wrapper"]')
         div(:class='$style["special-column"]')
           a.link 所属专栏：从零搭建Vue2+Webpack4工程 
     div(:class='$style["side-tool-bar"]')
-      i.icon.icon-xs.fa.fa-thumbs-up
-      i.icon.icon-sm.fa.fa-thumbs-up
-      i.icon.icon-bs.fa.fa-thumbs-up
-      i.icon.icon-lg.fa.fa-thumbs-up
-      i.icon.icon-xl.fa.fa-thumbs-up
+      i.icon.icon-xs.icon-gray-primary.fa.fa-thumbs-up
+      i.icon.icon-sm.icon-gray-info.fa.fa-thumbs-up
+      i.icon.icon-bs.icon-gray-warning.fa.fa-thumbs-up
+      i.icon.icon-lg.icon-gray-success.fa.fa-thumbs-up
+      i.icon.icon-xl.icon-gray-error.fa.fa-thumbs-up
   div(:class='$style["right-sidebar"]')
 </template>
 
