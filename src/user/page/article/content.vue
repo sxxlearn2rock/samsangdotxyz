@@ -23,6 +23,15 @@
 
 .content-body {
   padding: 15px;
+  d: flex;
+  .content {
+    flex-grow: 1;
+  }
+  .side-tool-bar {
+    w: 60px;
+    h: 100%;
+    bg: #ddd;
+  }
   .head {
     w: 100%;
     &>div{
@@ -54,18 +63,25 @@
 div(:class='$style["content-wrapper"]')
   div(:class='$style["left-ladder"]')
   div(:class='$style["content-body"]')
-    div(:class='$style["head"]')
-      div(:class='$style["title"]') 从零搭建Vue2+Webpack4工程(一) 搭建开发环境
-      div(:class='$style["detail"]')
-        span(:class='$style["publish-date"]') 2019-01-01 15:22:33
-        div(:class='$style["tag-group"]')
-          span(:class='$style["tag-icon"]')
-            i.fa.fa-tags
-          span(:class='$style["tag"]').tag.tag-info vue
-          span(:class='$style["tag"]').tag.tag-info vue
-          span(:class='$style["tag"]').tag.tag-info vue
-      div(:class='$style["special-column"]')
-        a.link 所属专栏：从零搭建Vue2+Webpack4工程 
+    div(:class='$style["content"]')
+      div(:class='$style["head"]')
+        div(:class='$style["title"]') 从零搭建Vue2+Webpack4工程(一) 搭建开发环境
+        div(:class='$style["detail"]')
+          span(:class='$style["publish-date"]') 2019-01-01 15:22:33
+          div(:class='$style["tag-group"]')
+            span(:class='$style["tag-icon"]')
+              i.fa.fa-tags
+            span(:class='$style["tag"]').tag.tag-info vue
+            span(:class='$style["tag"]').tag.tag-info vue
+            span(:class='$style["tag"]').tag.tag-info vue
+        div(:class='$style["special-column"]')
+          a.link 所属专栏：从零搭建Vue2+Webpack4工程 
+    div(:class='$style["side-tool-bar"]')
+      i.icon.icon-xs.fa.fa-thumbs-up
+      i.icon.icon-sm.fa.fa-thumbs-up
+      i.icon.icon-bs.fa.fa-thumbs-up
+      i.icon.icon-lg.fa.fa-thumbs-up
+      i.icon.icon-xl.fa.fa-thumbs-up
   div(:class='$style["right-sidebar"]')
 </template>
 

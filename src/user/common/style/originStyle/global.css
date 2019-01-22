@@ -73,6 +73,11 @@
     } 
   }
 
+  /* icon */
+  @each $st in $size-type {
+    @mixin icon $st;
+  }
+
   /* tag */
   .tag {
     d: inline-block;

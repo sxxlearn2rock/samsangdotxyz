@@ -72,3 +72,35 @@
     opacity: 0;
   }
 }
+
+/* icons */
+@define-mixin icon-size $size-type, $size{
+  .icon-$(size-type) {
+    w: $size;
+    h: $size;
+    line-height: $size;
+    bg: $content-bg-color-base;
+    text-align: center;
+    border-radius: calc($size / 2);
+    fs: calc($size / 2);
+  }
+}
+
+@define-mixin icon $size-type {
+  @if $size-type == xs {
+    @mixin icon-size $size-type, 16px;
+  } 
+  @if $size-type == sm {
+    @mixin icon-size $size-type, 24px;
+  } 
+  @if $size-type == bs {
+    @mixin icon-size $size-type, 32px;
+  } 
+  @if $size-type == lg {
+    @mixin icon-size $size-type, 40px;
+  }
+  @if $size-type == xl {
+    @mixin icon-size $size-type, 48px;
+  }
+}
+

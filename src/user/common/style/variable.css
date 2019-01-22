@@ -3,6 +3,8 @@
 @import './rucksack.css';
 
 /* common */
+$size-type: xs, sm, bs, lg, xl;
+
 $font-size-base: 14px;
 $font-size-big: 16px;
 $font-size-biger: 18px;
@@ -52,3 +54,9 @@ $nav-bg-color: $content-bg-color-base;
 
 /* footer */
 $footer-height: 60px;
+
+/* icon */
+$icon-size-xs: 16px;
+$icon-size-sm: 24px;
+$icon-size-bs: 32px;
+$icon-size-lg: 40px;
