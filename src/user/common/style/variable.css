@@ -17,6 +17,8 @@ $font-size-h3: 24px;
 $font-size-h2: 30px; 
 $font-size-h1: 36px; 
 
+$sep-space-base: 15px;
+
 $color-gray-lightest: #e6e6e6;
 $color-gray-lighter: #ccc;
 $color-gray-light: #999;

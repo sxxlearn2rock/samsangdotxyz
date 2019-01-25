@@ -58,7 +58,7 @@
 }
 
 /* display:flex;align-items: ;justify-content: ;的简写*/
-@define-mixin fja $a:center, $j:flex-start{
+@define-mixin fja $j:flex-start,$a:center{
   d: flex;
   align-items: $a;
   justify-content: $j;
@@ -106,10 +106,14 @@
 
 /* 灰色的图标 */
 @define-mixin icon-gray $type{
-  .icon.icon-gray-$type {
+  .icon>.icon-gray-$type {
     bg: $content-bg-color-base;
     &:hover {
       c: $color-$(type);
+      &+.tips {
+        c: $color-error;
+        bg: $content-bg-color-base;
+      }
     }
   }
 }

@@ -76,6 +76,24 @@
   /* icon */
   .icon {
     cursor: pointer;
+    &.icon-with-tips {
+      position: relative;
+    }
+    &>.tips {
+      $tips-size: 16px;
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      d: inline-block;
+      w: $tips-size;
+      h: $tips-size;
+      line-height: $tips-size;
+      fs: 12px;
+      text-align: center;
+      bg: $color-gray-lighter;
+      c: #fff;
+      border-radius: calc($tips-size / 2);
+    }
   }
   @each $st in $size-type {
     @mixin icon $st;

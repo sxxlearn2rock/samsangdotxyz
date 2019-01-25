@@ -22,28 +22,29 @@
 }
 
 .content-body {
-  padding: 15px;
+  padding-left: $sep-space-base;
   d: flex;
   .content {
     flex-grow: 1;
   }
   .side-tool-bar {
-    w: 60px;
+    w: 55px;
     h: 100%;
-    bg: #ddd;
+    bg: $sep-line-color-base;
     .btn-group {
-      @mixin fja;
+      @mixin fja flex-end, flex-end;
       flex-direction: column;
-      w: 60px;
+      w: 55px;
       position: fixed;
       top: 35%;
       &>span {
-        margin-bottom: 20px;
+        margin-bottom: $sep-space-base;
       }
     }
   }
   .head {
     w: 100%;
+    margin-top: $sep-space-base;
     &>div{
       padding: 5px 0;
     }
@@ -88,14 +89,19 @@ div(:class='$style["content-wrapper"]')
           a.link 所属专栏：从零搭建Vue2+Webpack4工程 
     div(:class='$style["side-tool-bar"]')
       div(:class='$style["btn-group"]')
-        span.icon.icon-lg.icon-gray-primary
-          i.fa.fa-thumbs-up
-        span.icon.icon-lg.icon-gray-info
-          i.fa.fa-commenting
-        span.icon.icon-lg.icon-gray-tips
-          i.fa.fa-share-alt
-        span.icon.icon-lg.icon-gray-success
-          i.fa.fa-money
+        span.icon.icon-with-tips
+          span.icon-lg.icon-gray-primary
+            i.fa.fa-thumbs-up
+          span.tips 12
+        span.icon
+          span.icon-lg.icon-gray-info
+            i.fa.fa-commenting
+        span.icon
+          span.icon-lg.icon-gray-tips
+            i.fa.fa-share-alt
+        span.icon
+          .icon-lg.icon-gray-success
+            i.fa.fa-money
   div(:class='$style["right-sidebar"]')
 </template>
 
