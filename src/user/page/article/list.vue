@@ -125,7 +125,7 @@ div(:class='$style["list-wrapper"]')
                 span.btn-item.warning(:title='item.is_collected ? "已收藏" : "收藏"'
                 :class='{active: item.is_collected}')
                   i.fa.fa-star
-                span.btn-item.success(title='分享')
+                span.btn-item.tips(title='分享')
                   i.fa.fa-share-alt
   div(:class='$style["right-sidebar"]')
 </template>

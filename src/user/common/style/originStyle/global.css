@@ -74,6 +74,9 @@
   }
 
   /* icon */
+  .icon {
+    cursor: pointer;
+  }
   @each $st in $size-type {
     @mixin icon $st;
   }
@@ -82,6 +85,7 @@
   @mixin icon-gray info;
   @mixin icon-gray warning;
   @mixin icon-gray error;
+  @mixin icon-gray tips;
 
   /* tag */
   .tag {
@@ -101,6 +105,7 @@
   @mixin tag-variant info;
   @mixin tag-variant warning;
   @mixin tag-variant error;
+  @mixin tag-variant tips;
 
   /* btn-group */
   .btn-group {
@@ -129,6 +134,7 @@
       @mixin btn-item-variant info;
       @mixin btn-item-variant warning;
       @mixin btn-item-variant error;
+      @mixin btn-item-variant tips;
     }
   }
 
@@ -138,6 +144,7 @@
   @mixin icon-variant info;
   @mixin icon-variant warning;
   @mixin icon-variant error;
+  @mixin icon-variant tips;
 
   /* vue */
   @mixin vue-transition-fade;

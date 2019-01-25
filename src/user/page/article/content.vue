@@ -31,6 +31,16 @@
     w: 60px;
     h: 100%;
     bg: #ddd;
+    .btn-group {
+      @mixin fja;
+      flex-direction: column;
+      w: 60px;
+      position: fixed;
+      top: 35%;
+      &>span {
+        margin-bottom: 20px;
+      }
+    }
   }
   .head {
     w: 100%;
@@ -77,11 +87,15 @@ div(:class='$style["content-wrapper"]')
         div(:class='$style["special-column"]')
           a.link 所属专栏：从零搭建Vue2+Webpack4工程 
     div(:class='$style["side-tool-bar"]')
-      i.icon.icon-xs.icon-gray-primary.fa.fa-thumbs-up
-      i.icon.icon-sm.icon-gray-info.fa.fa-thumbs-up
-      i.icon.icon-bs.icon-gray-warning.fa.fa-thumbs-up
-      i.icon.icon-lg.icon-gray-success.fa.fa-thumbs-up
-      i.icon.icon-xl.icon-gray-error.fa.fa-thumbs-up
+      div(:class='$style["btn-group"]')
+        span.icon.icon-lg.icon-gray-primary
+          i.fa.fa-thumbs-up
+        span.icon.icon-lg.icon-gray-info
+          i.fa.fa-commenting
+        span.icon.icon-lg.icon-gray-tips
+          i.fa.fa-share-alt
+        span.icon.icon-lg.icon-gray-success
+          i.fa.fa-money
   div(:class='$style["right-sidebar"]')
 </template>
 

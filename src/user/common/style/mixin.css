@@ -94,6 +94,7 @@
 
 @define-mixin icon-size $size-type, $size{
   .icon-$(size-type) {
+    display: inline-block;
     w: $size;
     h: $size;
     line-height: $size;
