@@ -80,10 +80,11 @@
       position: relative;
     }
     &>.tips {
+      visibility: hidden;
       $tips-size: 16px;
       position: absolute;
-      top: -3px;
-      right: -3px;
+      top: -1px;
+      right: -1px;
       d: inline-block;
       w: $tips-size;
       h: $tips-size;

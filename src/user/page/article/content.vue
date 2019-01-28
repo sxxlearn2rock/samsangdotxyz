@@ -89,17 +89,17 @@ div(:class='$style["content-wrapper"]')
           a.link 所属专栏：从零搭建Vue2+Webpack4工程 
     div(:class='$style["side-tool-bar"]')
       div(:class='$style["btn-group"]')
-        span.icon.icon-with-tips
+        span.icon.icon-with-tips(title='点赞')
           span.icon-lg.icon-gray-primary
             i.fa.fa-thumbs-up
           span.tips 12
-        span.icon
+        span.icon(title='评论')
           span.icon-lg.icon-gray-info
             i.fa.fa-commenting
-        span.icon
+        span.icon(title='分享')
           span.icon-lg.icon-gray-tips
             i.fa.fa-share-alt
-        span.icon
+        span.icon(title='赞赏')
           .icon-lg.icon-gray-success
             i.fa.fa-money
   div(:class='$style["right-sidebar"]')

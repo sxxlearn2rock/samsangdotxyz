@@ -107,10 +107,13 @@
 /* 灰色的图标 */
 @define-mixin icon-gray $type{
   .icon>.icon-gray-$type {
-    bg: $content-bg-color-base;
+    c: #fff;
+    bg: $color-gray-lightest;
     &:hover {
       c: $color-$(type);
+      bg: $content-bg-color-base;
       &+.tips {
+        visibility: visible;
         c: $color-error;
         bg: $content-bg-color-base;
       }

@@ -78,7 +78,7 @@
       h: 100%;
     }
     &>.right-part {
-      @mixin fja center, flex-end;
+      @mixin fja flex-end, center;
       w: 50%;
     }
   }

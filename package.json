@@ -53,6 +53,7 @@
     "webpack-merge": "^4.1.5"
   },
   "dependencies": {
+    "mavon-editor": "^2.6.17",
     "vue": "^2.5.21",
     "vue-router": "^3.0.2",
     "vuex": "^3.0.1"
