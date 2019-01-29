@@ -1,8 +1,9 @@
 <style lang="sss" module>
 @import '../../common/style/mixin.css';
 .list-wrapper {
-  w: 100%;
+  w: 1200px;
   h: 100%;
+  margin: 0 auto;
   d: flex;
   justify-content: space-between;
   .list {

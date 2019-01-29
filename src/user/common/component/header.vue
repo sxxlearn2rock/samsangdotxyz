@@ -46,7 +46,7 @@ export default {
       },
       {
         name: 'article',
-        path: '/article'
+        path: '/article/list'
       },
       {
         name: 'lab',

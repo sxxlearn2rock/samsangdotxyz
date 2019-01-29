@@ -1,15 +1,11 @@
 <style lang="sss" module>
-.lab-wrapper {
-  @mixin full-size;
-}
+
 </style>
 
 <template lang="pug">
-div(:class='$style["lab-wrapper"]')
-  h1 hello lab
-  #editor
-    mavon-editor(v-model='mdValue'
-     style="height: 100%")
+div(:class='$style["wrapper"]')
+  div(:id='$style["editor"]')
+    mavon-editor
 </template>
 
 <script>

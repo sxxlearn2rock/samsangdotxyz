@@ -1,15 +1,14 @@
 <style lang="sss" module>
-@import '../../common/style/variable.css';
 .article-wrapper {
-  width: 1200px;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
 }
 </style>
 
 <template lang="pug">
 div(:class='$style["article-wrapper"]')
-  article-list
+  //- article-list
+  router-view
 </template>
 
 <script>
