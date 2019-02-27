@@ -1,4 +1,5 @@
 <style lang="sss" module>
+@import '../../common/style/mixin.css';
 .lab-wrapper {
   @mixin full-size;
 }

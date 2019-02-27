@@ -165,6 +165,13 @@
   @mixin icon-variant error;
   @mixin icon-variant tips;
 
+  /* btn */
+  .btn {
+    display: inline-block;
+    /*height: */
+  }
+
+
   /* vue */
   @mixin vue-transition-fade;
 }

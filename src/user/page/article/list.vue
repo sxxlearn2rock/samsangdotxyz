@@ -6,6 +6,7 @@
   margin: 0 auto;
   d: flex;
   justify-content: space-between;
+  padding: 20px 0;
   .list {
     width: 70%;
     background: $content-bg-color-base;
